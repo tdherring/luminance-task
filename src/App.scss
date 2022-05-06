@@ -1,0 +1,98 @@
+// Global Font
+
+@font-face {
+  font-family: "Pieces of Eight";
+  src: url("assets/fonts/Pieces of Eight.ttf") format("truetype");
+}
+
+header {
+  font-family: "Pieces of Eight", sans-serif;
+  font-size: 5rem;
+}
+
+.tile > .title {
+  font-family: "Pieces of Eight", sans-serif;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 3rem;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+// General Classes
+
+.text-centered {
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tile {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+// Container
+
+.container {
+  margin: 0 auto;
+  max-width: 1344px;
+}
+
+@media (min-width: 1024px) and (max-width: 1215px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1216px) and (max-width: 1407px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+// News Feed
+
+.news-feed {
+  background-color: black;
+  color: white;
+}
+
+// Misc
+
+header,
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0 20px 0;
+}
+
+.main {
+  padding: 30px 15px 30px 15px;
+  background-color: lightgray;
+}
+
+a {
+  color: #485fc7;
+  text-decoration: none;
+}
