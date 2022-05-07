@@ -4,11 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const AppWithCallbackAfterRender = () => {
-  return (
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
+  return <App />;
 };
 
 const container = document.getElementById("root");

@@ -78,6 +78,28 @@ body {
   color: white;
 }
 
+.news-feed-item {
+  width: 100%;
+  border-radius: 10px;
+  background-color: lightgray;
+  color: black;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-flex;
+  .title {
+    padding-bottom: 5px;
+  }
+  .description,
+  .info {
+    font-size: 0.8rem;
+    color: #555555;
+  }
+  .text-container {
+    padding: 10px;
+  }
+}
+
 // Misc
 
 header,
