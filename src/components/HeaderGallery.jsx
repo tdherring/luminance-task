@@ -19,7 +19,7 @@ const HeaderGallery = () => {
     }, 5000);
 
     return () => clearTimeout(interval);
-  }, [activeImage]);
+  }, [activeImage, IMAGES.length]);
 
   return (
     <div className="header-gallery">
