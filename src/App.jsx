@@ -1,15 +1,15 @@
 import "./App.scss";
-import Header from "./components/Header";
+import HeaderGallery from "./components/HeaderGallery";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <Header />
+    <div className="fade-in">
+      <HeaderGallery />
       <Body />
       <Footer />
-    </>
+    </div>
   );
 }
 

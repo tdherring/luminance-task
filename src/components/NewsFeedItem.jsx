@@ -5,9 +5,10 @@ const NewsFeedItem = ({ title, link, date }) => {
     <div className="news-feed-item">
       <span className="text-container text-justified">
         <div className="title">
-          <a href={link}>{title}</a>
+          <a href={link}>
+            <strong>{title}</strong>
+          </a>
         </div>
-        <hr />
         <div className="info">{date}</div>
       </span>
     </div>

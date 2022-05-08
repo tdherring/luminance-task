@@ -4,6 +4,7 @@ const About = () => {
   return (
     <div className="tile about">
       <span className="title">About</span>
+      <hr />
       <span className="text-justified">
         <p>
           John Christopher Depp II (born June 9, 1963) is an American actor, producer, musician and painter. He is the recipient of multiple accolades, including a Golden Globe Award and a Screen
@@ -22,6 +23,9 @@ const About = () => {
           claimed that Heard had abused him before he unsuccessfully sued the publishers of British tabloid The Sun for defamation under English law. Depp later sued Heard for defamation in Virginia
           after she wrote an op-ed saying she was a public victim of domestic violence. The trial Depp v. Heard began in 2022. Depp describes himself as a victim of cancel culture. He is the father of
           French-American actress and model Lily-Rose Depp.
+        </p>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Johnny_Depp">Read more on Wikipedia...</a>
         </p>
       </span>
     </div>

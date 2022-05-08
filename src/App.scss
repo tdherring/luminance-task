@@ -12,7 +12,7 @@ $secondary: white;
 
 header {
   font-family: "Pieces of Eight", sans-serif;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 .tile > .title {
@@ -22,7 +22,7 @@ header {
 
 @media (max-width: 768px) {
   header {
-    font-size: 3rem;
+    font-size: 12vw;
   }
 }
 
@@ -30,6 +30,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin: 0;
+  background-color: $primary;
 }
 
 // General Classes
@@ -61,9 +62,9 @@ body {
   min-height: 100px;
   padding: 20px;
   width: 100%;
-  border-radius: 10px;
-  background-color: $primary;
-  color: white;
+  border-radius: 5px;
+  background-color: white;
+  color: $primary;
 }
 
 @media (max-width: 1024px) {
@@ -72,11 +73,31 @@ body {
   }
 }
 
+// Header Gallery
+
+.header-gallery {
+  img {
+    width: 100%;
+    max-height: 100vh !important;
+    object-fit: cover;
+    object-position: top;
+    min-height: 100vh;
+    filter: grayscale(100%) brightness(50%);
+  }
+  header {
+    position: absolute !important;
+    top: 3%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 // Container
 
 .container {
   margin: 0 auto;
   max-width: 1344px;
+  padding: 30px 15px 30px 15px;
 }
 
 @media (min-width: 1024px) and (max-width: 1215px) {
@@ -102,7 +123,6 @@ body {
 .news-feed {
   overflow: auto;
   max-height: 591px;
-  width: calc(50% - 7.5px);
   scrollbar-width: none;
 }
 
@@ -113,8 +133,8 @@ body {
 .news-feed-item {
   width: 100%;
   border-radius: 5px;
-  background-color: $secondary;
-  color: $primary;
+  background-color: #dddddd;
+  color: $secondary;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -135,71 +155,58 @@ body {
   }
 }
 
-// About
-
-.about {
-  width: calc(50% - 7.5px);
-}
-
-// Gallery
-
-.gallery {
-  .images {
-    padding-top: 10px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 5px;
-  }
-  .button {
-    background-color: $secondary;
-    color: $primary;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    width: calc(50% - 5px);
-    text-align: center;
-    margin-top: 10px;
-  }
-  .button:hover {
-    filter: brightness(0.9);
-  }
-  .prev {
-    margin-right: 5px;
-  }
-  .next {
-    margin-left: 5px;
-  }
-}
-
 // Misc
 
-header,
+header {
+  background-color: transparent;
+  color: $secondary;
+}
+
 footer {
   background-color: $primary;
   color: white;
   padding: 20px 0 20px 0;
 }
 
-.main {
-  padding: 30px 15px 30px 15px;
-  background-color: $secondary;
+.body {
+  background-color: $primary;
 }
 
 a {
-  color: #485fc7;
+  color: slateblue;
   text-decoration: none;
 }
-
-// Custom Scrollbar
 
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+hr {
+  border-color: #888888;
+}
+
+// Animations
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Custom Scroll
 
 ::-webkit-scrollbar {
   width: 10px;

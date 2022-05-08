@@ -1,15 +1,13 @@
 import React from "react";
 import NewsFeed from "./NewsFeed";
 import About from "./About";
-import Gallery from "./Gallery";
 
 const Body = () => {
   return (
-    <div className="main">
-      <div className="container flex-row">
+    <div className="body">
+      <div className="container flex-col">
         <About />
         <NewsFeed />
-        <Gallery />
       </div>
     </div>
   );

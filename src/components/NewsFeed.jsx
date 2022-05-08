@@ -9,7 +9,6 @@ const NewsFeed = () => {
       fetch("https://api.allorigins.win/get?url=https://news.google.com/rss/search?q=depp&hl=en-GB&gl=GB&ceid=GB:en")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data.contents);
           let rss = data.contents;
 
           const parser = new DOMParser();
