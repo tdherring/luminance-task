@@ -4,7 +4,6 @@ const About = () => {
   return (
     <div className="tile about">
       <span className="title">About</span>
-      <hr />
       <span className="text-justified">
         <p>
           John Christopher Depp II (born June 9, 1963) is an American actor, producer, musician and painter. He is the recipient of multiple accolades, including a Golden Globe Award and a Screen

@@ -1,6 +1,7 @@
 import React from "react";
 import NewsFeed from "./NewsFeed";
 import About from "./About";
+import Video from "./Video";
 
 const Body = () => {
   return (
@@ -8,6 +9,7 @@ const Body = () => {
       <div className="container flex-col">
         <About />
         <NewsFeed />
+        <Video />
       </div>
     </div>
   );
