@@ -10,25 +10,35 @@ $secondary: white;
   src: url("assets/fonts/Pieces of Eight.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Rajdhani";
+  src: url("assets/fonts/Rajdhani-Regular.ttf") format("truetype");
+}
+
 header {
   font-family: "Pieces of Eight", sans-serif;
   font-size: 6rem;
 }
 
-.tile > .title {
-  font-family: "Pieces of Eight", sans-serif;
-  font-size: 2rem;
+.tile > .title,
+.header-gallery > .scroll-down {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
   header {
     font-size: 12vw;
   }
+  .header-gallery > .scroll-down {
+    font-size: 8vw;
+  }
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.2rem;
   margin: 0;
   background-color: $primary;
 }
@@ -43,28 +53,18 @@ body {
   text-align: justify;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 15px;
-  align-items: stretch;
-}
-
 .flex-col {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 .tile {
   min-height: 100px;
   padding: 20px;
-  width: 100%;
   border-radius: 5px;
-  background-color: white;
-  color: $primary;
+  color: $secondary;
 }
 
 @media (max-width: 1024px) {
@@ -85,10 +85,17 @@ body {
     filter: grayscale(100%) brightness(50%);
   }
   header {
-    position: absolute !important;
+    position: absolute;
     top: 3%;
     width: 100%;
     text-align: center;
+  }
+  .scroll-down {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    text-align: center;
+    color: $secondary;
   }
 }
 
@@ -120,14 +127,11 @@ body {
 
 // News Feed
 
-.news-feed {
+.news-feed > .flex-col {
   overflow: auto;
   max-height: 591px;
   scrollbar-width: none;
-}
-
-.news-feed::-webkit-scrollbar {
-  display: none;
+  padding-right: 10px;
 }
 
 .news-feed-item {
@@ -135,16 +139,14 @@ body {
   border-radius: 5px;
   background-color: #dddddd;
   color: $secondary;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   display: inline-flex;
   .title {
-    padding: 5px 0 5px 0;
+    margin: 0;
   }
   .info {
     font-size: 0.8rem;
     color: #555555;
+    margin: 0;
   }
   .text-container {
     width: 100%;
@@ -174,30 +176,20 @@ body {
 
 // Misc
 
-header {
-  background-color: transparent;
-  color: $secondary;
-}
-
-footer {
-  background-color: $primary;
-  color: white;
-  padding: 20px 0 20px 0;
-}
-
-.body {
-  background-color: $primary;
-}
-
-a {
-  color: slateblue;
-  text-decoration: none;
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+header,
+footer {
+  color: $secondary;
+}
+
+a {
+  color: mediumslateblue;
+  text-decoration: none;
 }
 
 hr {

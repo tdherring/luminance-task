@@ -1,9 +1,14 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
     <div className="tile about">
-      <span className="title">About</span>
+      <span className="title">
+        <FontAwesomeIcon icon={faUser} />
+        &nbsp; About
+      </span>
       <span className="text-justified">
         <p>
           John Christopher Depp II (born June 9, 1963) is an American actor, producer, musician and painter. He is the recipient of multiple accolades, including a Golden Globe Award and a Screen

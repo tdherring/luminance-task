@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NewsFeedItem from "./NewsFeedItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 const NewsFeed = () => {
   const [news, setNews] = useState([]);
@@ -34,7 +36,10 @@ const NewsFeed = () => {
 
   return (
     <div className="tile news-feed">
-      <span className="title">News Feed</span>
+      <span className="title">
+        <FontAwesomeIcon icon={faNewspaper} />
+        &nbsp;News Feed
+      </span>
       <div className="flex-col">{news.length > 0 && news.map((n) => <NewsFeedItem key={n.title} title={n.title} link={n.link} date={n.date} />)}</div>
     </div>
   );

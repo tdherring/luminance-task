@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CrossfadeImage from "react-crossfade-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import depp_0 from "../assets/images/depp_0.webp";
 import depp_1 from "../assets/images/depp_1.webp";
 import depp_2 from "../assets/images/depp_2.webp";
@@ -21,10 +23,13 @@ const HeaderGallery = () => {
 
   return (
     <div className="header-gallery">
-      {/* <img className="current-image" src={IMAGES[activeImage]} />
-      <img className="next-image" src={IMAGES[activeImage > 0 ? activeImage - 1 : IMAGES.length - 1]} /> */}
-      <CrossfadeImage className="image" src={IMAGES[activeImage]} duration="1000" />
+      <CrossfadeImage className="image" src={IMAGES[activeImage]} duration={1000} />
       <header>$ Johnny Depp $</header>
+      <span className="scroll-down">
+        Scroll Down
+        <br />
+        <FontAwesomeIcon icon={faChevronDown} />
+      </span>
     </div>
   );
 };

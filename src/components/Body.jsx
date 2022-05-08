@@ -6,10 +6,10 @@ import Video from "./Video";
 const Body = () => {
   return (
     <div className="body">
-      <div className="container flex-col">
+      <div className="container">
         <About />
-        <NewsFeed />
         <Video />
+        <NewsFeed />
       </div>
     </div>
   );
